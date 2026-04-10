@@ -1,0 +1,38 @@
+◇ injected env (12) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+🚀 Starting Comprehensive Integration Tests...
+
+1️⃣  Registering & Logging in (test1775832623633@test.com)...
+✅ Connected to smart_farming_db successfully.
+
+2️⃣  Testing Language Setup...
+✅ Language updated: Language updated to dz
+
+3️⃣  Testing Geographic DB (Wilayas)...
+✅ Fetched Wilayas count: 58
+
+4️⃣  Testing Agriculture Guides...
+✅ Fetched planting guides count: 4
+✅ Soil Analysis Score: Poor (3 recommendations)
+   - التربة قاعدية جداً: أضف سماد كبريتي زراعي وتقليل استخدام المياه القلوية.
+   - تربة رملية: تفقد المياه والمغذيات بسرعة. استخدم الأسمدة العضوية لتحسين قدرتها على الاحتفاظ بالماء.
+   - نقص النيتروجين المكتشف يحد من نمو الأوراق. أضف أسمدة أزوتية (مثل اليوريا).
+
+5️⃣  Creating a Farm...
+✅ Farm created, ID: 4
+
+6️⃣  Testing Offline Logbook Sync...
+✅ Offline Sync completed. Synced records: 2
+
+7️⃣  Testing Fetching Logs...
+✅ Total farmer logs fetched: 2
+
+8️⃣  Testing Smart Irrigation (with Auto-Weather Fetch)...
+✅ Irrigation mm: 4.27
+
+9️⃣  Testing Weather Alerts (with Auto-Weather Fetch)...
+✅ Alerts logged: 0
+
+🔟  Testing Yield Prediction (with Auto-Weather Fetch)...
+✅ Yield predicted: 7.99 tons
+
+🎉 All Comprehensive Tests Passed!

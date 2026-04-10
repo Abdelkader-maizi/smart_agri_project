@@ -1,0 +1,5 @@
+◇ injected env (12) from .env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+🚀 Server running on port 5000
+✅ Connected to smart_farming_db successfully.
+✅ PostgreSQL connected successfully.
+[DEV] Password reset email sent. Message ID: <714c5228-ebcf-c16e-8bd3-82fe1b1ac945@gmail.com>

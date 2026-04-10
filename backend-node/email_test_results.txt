@@ -1,0 +1,19 @@
+◇ injected env (12) from .env // tip: ⌘ enable debugging { debug: true }
+🚀 Starting Email Flow Tests for maizi.abdelkader@fs.univ-medea.dz...
+✅ Connected to smart_farming_db successfully.
+🧹 Cleaned up existing user record.
+
+1️⃣ Registering...
+✅ Registration complete. (Welcome Email Sent)
+
+2️⃣ Logging in...
+✅ Login complete. (New Login Email Sent)
+
+3️⃣ Requesting Password Reset...
+✅ Forgot Password request complete. (Token Email Sent)
+   (Internal check - token retrieved from DB: 600494)
+
+4️⃣ Resetting Password...
+✅ Password Reset complete. (Success Email Sent)
+
+🎉 All 4 Emails should have been successfully delivered to the inbox!
