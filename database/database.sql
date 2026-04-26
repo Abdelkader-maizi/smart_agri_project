@@ -18,6 +18,7 @@ CREATE TABLE farms (
     location TEXT,
     latitude DOUBLE PRECISION,
     longitude DOUBLE PRECISION,
+    city VARCHAR(100),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 

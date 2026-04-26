@@ -6,6 +6,7 @@ import UsersTable from './components/UsersTable';
 import AdminLogin from './components/AdminLogin';
 import AlertsTable from './components/AlertsTable';
 import FarmsTable from './components/FarmsTable';
+import Chatbot from './components/Chatbot';
 import './index.css';
 
 // Simple auth check
@@ -24,6 +25,7 @@ const DashboardLayout = ({ children }) => {
           {children}
         </div>
       </main>
+      <Chatbot />
     </div>
   );
 };

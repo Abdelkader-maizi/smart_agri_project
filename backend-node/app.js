@@ -61,6 +61,7 @@ app.use("/api/logbook", require("./routes/logbook"));
 app.use("/api/guides", require("./routes/guides"));
 app.use("/api/admin", require("./routes/admin"));
 app.use("/api/weather", require("./routes/weather"));
+app.use("/api/chat", require("./routes/chat"));
 
 // --- 7. Health check ---
 app.get("/", (req, res) => {

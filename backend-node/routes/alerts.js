@@ -19,8 +19,7 @@ router.post("/", auth, async (req, res) => {
           if (temperature === undefined) temperature = w.temperature;
           if (humidity === undefined) humidity = w.humidity;
           if (rainfall === undefined) rainfall = w.rainfall;
-          // wind_speed is not in fetchCurrentWeather yet, assume default if missing
-          if (wind_speed === undefined) wind_speed = 10;
+          if (wind_speed === undefined) wind_speed = w.wind_speed;
         } catch (e) {
           console.error("Failed to auto-fetch weather for alerts:", e.message);
         }

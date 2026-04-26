@@ -5,11 +5,11 @@ const auth = require("../middleware/auth");
 // Add farm
 router.post("/", auth, async (req, res) => {
   try {
-    const { name, latitude, longitude } = req.body;
+    const { name, city, latitude, longitude } = req.body;
 
     // Input validation
-    if (!name || latitude === undefined || longitude === undefined)
-      return res.status(400).json({ success: false, error: "Farm name, latitude, and longitude are required" });
+    if (!name || !city || latitude === undefined || longitude === undefined)
+      return res.status(400).json({ success: false, error: "Farm name, city, latitude, and longitude are required" });
 
     if (isNaN(latitude) || isNaN(longitude))
       return res.status(400).json({ success: false, error: "Latitude and longitude must be valid numbers" });
@@ -18,8 +18,8 @@ router.post("/", auth, async (req, res) => {
       return res.status(400).json({ success: false, error: "Latitude or longitude out of valid range" });
 
     const farm = await pool.query(
-      "INSERT INTO farms(user_id, name, latitude, longitude) VALUES($1,$2,$3,$4) RETURNING *",
-      [req.user.id, name, latitude, longitude]
+      "INSERT INTO farms(user_id, name, city, latitude, longitude) VALUES($1,$2,$3,$4,$5) RETURNING *",
+      [req.user.id, name, city, latitude, longitude]
     );
 
     res.status(201).json({ success: true, farm: farm.rows[0] });

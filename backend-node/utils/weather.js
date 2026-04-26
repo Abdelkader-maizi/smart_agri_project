@@ -8,7 +8,7 @@ const axios = require('axios');
  */
 async function fetchCurrentWeather(lat, lon) {
   try {
-    const url = `https://api.open-meteo.com/v1/forecast?latitude=${Number(lat)}&longitude=${Number(lon)}&current=temperature_2m,relative_humidity_2m,precipitation`;
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${Number(lat)}&longitude=${Number(lon)}&current=temperature_2m,relative_humidity_2m,precipitation,wind_speed_10m`;
     
     // Add a reasonable timeout in case Open-meteo is slow
     const response = await axios.get(url, { timeout: 8000 });
@@ -17,7 +17,8 @@ async function fetchCurrentWeather(lat, lon) {
     return {
       temperature: current.temperature_2m,
       humidity: current.relative_humidity_2m,
-      rainfall: current.precipitation
+      rainfall: current.precipitation,
+      wind_speed: current.wind_speed_10m
     };
   } catch (error) {
     console.error("Open-Meteo API Fetch Error:", error.message);
